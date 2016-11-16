@@ -1,5 +1,13 @@
+/*body {
+	background-image: url("../img/Arcade_Ahri_1920x1200.jpg");
+	
+}*/
 body {
-	background-image: url("Arcade_Ahri_1920x1200.jpg");
-	position: center;
+  background: url("../img/Arcade_Ahri_1920x1200.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 	
