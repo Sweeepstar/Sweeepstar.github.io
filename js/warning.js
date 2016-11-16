@@ -1,5 +1,5 @@
 window.console.log = function() {
-    console.warn('%c Oh my heavens! ', 'background: #222; color: #bada55');
+    console.warn('%c Oh my heavens! ', 'background: #222; color: #bada55; font-size: 100px');
     window.console.log = function() {
         return false;
     }
