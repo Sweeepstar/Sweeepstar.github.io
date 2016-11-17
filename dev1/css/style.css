@@ -7,8 +7,15 @@ body {
 }
 
 .nightcore {
-  position: center;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    margin-top: 16em;
+    height: 100%;
+    display: table;
+
 }
+
 
 @media screen and (max-device-width: 768px){
 
