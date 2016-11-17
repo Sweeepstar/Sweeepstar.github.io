@@ -5,3 +5,12 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+@media screen and (max-device-width: 768px){
+
+	body {
+	  background: url("../img/Arcade_Ahri_1920x1200.jpg");
+	  background-size: absolute;
+	}
+
+}
