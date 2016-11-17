@@ -1,13 +1,9 @@
 body {
-<<<<<<< HEAD
-  background: url("../img/animo1.png") no-repeat center center fixed;
-=======
-  background: url("img/Animo1.png") no-repeat center center fixed;
->>>>>>> origin/master
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url("../img/animo1.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .nightcore {
@@ -17,20 +13,16 @@ body {
     margin-top: 25em;
     height: 100%;
     display: table;
-
 }
 
-@media screen and (max-device-width: 768px){
-
-	body {
-	  background: url("../img/Arcade_Ahri_1920x1200.jpg") no-repeat center fixed;
-	}
-
-	.btn {
-		display: none;
-	}
-
-	.btn-default {
-		display: none;
-	}
+@media screen and (max-device-width: 768px) {
+    body {
+        background: url("../img/Arcade_Ahri_1920x1200.jpg") no-repeat center fixed;
+    }
+    .btn {
+        display: none;
+    }
+    .btn-default {
+        display: none;
+    }
 }
