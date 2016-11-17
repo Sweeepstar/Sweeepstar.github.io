@@ -11,5 +11,12 @@ body {
 	body {
 	  background: url("../img/Arcade_Ahri_1920x1200.jpg") no-repeat center fixed;
 	}
-
+	
+	.btn {
+		display: none;
+	}
+	
+	.btn-default {
+		display: none;
+	}
 }
