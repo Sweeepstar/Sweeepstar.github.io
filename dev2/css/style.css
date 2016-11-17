@@ -5,11 +5,3 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-
-@media screen and (max-device-width: 768px){
-
-	body {
-	  background: url("../img/Rem_ReZero.png") no-repeat center fixed;
-	}
-  
-}
