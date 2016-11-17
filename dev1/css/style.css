@@ -10,9 +10,13 @@ body {
     text-align: center;
     width: 100%;
     vertical-align: middle;
-    margin-top: 25em;
+    margin-top: 1em;
     height: 100%;
     display: table;
+}
+.center{
+  text-align: center;
+  margin-top: 24em;
 }
 
 @media screen and (max-device-width: 768px) {
