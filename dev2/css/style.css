@@ -1,5 +1,5 @@
 body {
-  background: url("../img/Arcade_Ahri_1920x1200.jpg") no-repeat center center fixed;
+  background: url("../img/Rem_ReZero.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,14 +9,7 @@ body {
 @media screen and (max-device-width: 768px){
 
 	body {
-	  background: url("../img/Arcade_Ahri_1920x1200.jpg") no-repeat center fixed;
+	  background: url("../img/Rem_ReZero.png") no-repeat center fixed;
 	}
-	
-	.btn {
-		display: none;
-	}
-	
-	.btn-default {
-		display: none;
-	}
+  
 }
