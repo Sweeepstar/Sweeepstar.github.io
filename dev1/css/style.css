@@ -17,7 +17,7 @@ body {
 
 @media screen and (max-device-width: 768px) {
     body {
-        background: url("../img/Arcade_Ahri_1920x1200.jpg") no-repeat center fixed;
+        background: url("../img/Animo1.png") no-repeat center fixed;
     }
     .btn {
         display: none;
