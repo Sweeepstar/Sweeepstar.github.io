@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
   background: url("../img/animo1.png") no-repeat center center fixed;
+=======
+  background: url("img/Animo1.png") no-repeat center center fixed;
+>>>>>>> origin/master
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
