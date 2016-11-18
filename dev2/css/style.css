@@ -6,3 +6,16 @@ html {
   -o-background-size: cover;
   background-size: 100% auto;
 }
+
+@media screen and (max-device-width: 736px){
+
+  html {
+    background: url("../img/test.png") no-repeat center center fixed;
+    background-color: #a6bed7;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% auto;
+  }
+
+}
