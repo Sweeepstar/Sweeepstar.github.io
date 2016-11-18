@@ -1,7 +1,8 @@
 html {
   background: url("../img/Rem_ReZero.png") no-repeat center center fixed;
+  background-color: #a6bed7;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: 100% auto;
 }
