@@ -11,20 +11,56 @@ html, body {
     text-align: center;
     width: 100%;
     vertical-align: middle;
-    margin-top: 10em;
     height: 100%;
     display: table;
 }
 
-@media screen and (max-device-width: 736px){
+// =========== \\ MIN-WIDTH
 
-  html {
-    background: url("../img/test.png") no-repeat center center fixed;
-    background-color: #a6bed7;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 100% auto;
-  }
+// Small devices (landscape phones, 544px and up)
+@media (min-width: 544px) { ... }
 
-}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// =========== \\ MAX-WIDTH
+
+// Extra small devices (portrait phones, less than 544px)
+@media (max-width: 543px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) { ... }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+// =========== \\ MIN-WIDTH & MAX-WIDTH
+
+// Extra small devices (portrait phones, less than 544px)
+@media (max-width: 543px) { ... }
+
+// Small devices (landscape phones, 544px and up)
+@media (min-width: 544px) and (max-width: 767px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// =========== \\
