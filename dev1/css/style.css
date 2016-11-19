@@ -1,4 +1,4 @@
-body {
+ body {
     background: url("../img/Animo1_LS.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -29,7 +29,7 @@ body {
 
 .center {
     text-align: center;
-    margin-top: 24em;
+    margin-top: 21em;
     color: black;
     font-weight: bold;
 }
