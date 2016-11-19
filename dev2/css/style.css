@@ -1,10 +1,19 @@
-html {
+html, body {
   background: url("../img/Rem_ReZero.png") no-repeat center center fixed;
   background-color: #a6bed7;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: 100% auto;
+}
+
+.playstv {
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    margin-top: 10em;
+    height: 100%;
+    display: table;
 }
 
 @media screen and (max-device-width: 736px){
