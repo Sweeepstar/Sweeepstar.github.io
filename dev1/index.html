@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/bootstrap.css?2.0.0">
     <link rel="stylesheet" href="css/ie10-viewport-bug-workaround.css?1.0.0">
     <link rel="stylesheet" href="css/style.css?1.0.2">
+    <link rel="stylesheet" href="../css/shuffle.css?1.0.0">
 </head>
 
 <body>
@@ -67,11 +68,79 @@
 
 
 
+    <!-- OLD iFrame
     <div class="nightcore">
-        <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/fEbOOEj1ijk?loop=1&playlist=fEbOOEj1ijk&rel=0&amp;showinfo=0" frameborder="1"  allowfullscreen></iframe>-->
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLtqPa_dqh_qPX2PK1cCej7YFeFKWiGfH7&rel=0&amp;showinfo=0" frameborder="1" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLtqPa_dqh_qPX2PK1cCej7YFeFKWiGfH7&rel=0&amp;showinfo=0" frameborder="1" enablejsapi="1" allowfullscreen></iframe>
     </div>
+    OLD iFrame -->
+
+    <div class="shuffleEmbed" id="player"></div>
+  <script>
+      /* Replace This Code - get Value from playlist page and place it here */
+      var playlistId = "PLtqPa_dqh_qPX2PK1cCej7YFeFKWiGfH7";
+      var tag = document.createElement('script');
+  		tag.src = "https://www.youtube.com/iframe_api";
+
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+
+      function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+              height: '315',
+              width: '560',
+              events: {
+                  'onReady': onPlayerReady,
+                  'onStateChange': onPlayerStateChange
+              }
+
+          });
+      }
+
+
+      var playlistArray;
+      var playListArrayLength;
+      var maxNumber;
+
+      var oldNumber = 0;
+      var NewNumber = 0;
+
+      function newRandomNumber() {
+          oldNumber = NewNumber;
+          NewNumber = Math.floor(Math.random() * maxNumber);
+          if (NewNumber == oldNumber) {
+              newRandomNumber();
+          } else {
+              return NewNumber;
+          }
+      }
+
+  function onPlayerReady(event) {
+      player.loadPlaylist({
+          'listType': 'playlist',
+          'list': playlistId
+      });
+  }
+
+  var firstLoad = true;
+  function onPlayerStateChange(event) {
+      console.log(event.data);
+      if (event.data == YT.PlayerState.ENDED) {
+          player.playVideoAt(newRandomNumber());
+      } else {
+          if (firstLoad && event.data == YT.PlayerState.PLAYING) {
+              firstLoad = false;
+              playlistArray = player.getPlaylist();
+              playListArrayLength = playlistArray.length;
+              maxNumber = playListArrayLength;
+              NewNumber = newRandomNumber();
+              player.playVideoAt(newRandomNumber());
+          }
+      }
+  }
+
+  </script>
 
     <!-- Bootstrap core JavaScript
         ================================================== -->

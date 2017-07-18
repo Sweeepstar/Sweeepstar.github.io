@@ -6,15 +6,6 @@
      background-size: cover;
  }
 
- .nightcore {
-     text-align: center;
-     width: 100%;
-     vertical-align: middle;
-     margin-top: 1em;
-     height: 100%;
-     display: table;
- }
-
  @media screen and (max-device-width: 768px) {
      body {
          background: url("../img/Animo1_LS.jpg") no-repeat center fixed;

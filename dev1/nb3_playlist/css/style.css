@@ -6,14 +6,6 @@
      background-size: cover;
  }
 
- .nightcore {
-     text-align: center;
-     width: 100%;
-     vertical-align: middle;
-     margin-top: 1em;
-     height: 100%;
-     display: table;
- }
 
  @media screen and (max-device-width: 768px) {
      body {
@@ -25,11 +17,4 @@
      .btn-default {
          display: none;
      }
- }
-
- .center {
-     text-align: center;
-     margin-top: 21em;
-     color: black;
-     font-weight: bold;
  }
