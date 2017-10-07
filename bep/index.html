@@ -30,9 +30,6 @@
   <link rel="stylesheet" href="css/ie10-viewport-bug-workaround.css?1.0.0">
   <link rel="stylesheet" href="css/style.css?1.0.2">
 
-  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -73,7 +70,20 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  function copyToClipboard(elementId) {
 
+
+    var aux = document.createElement("input");
+    aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand("copy");
+
+    document.body.removeChild(aux);
+
+  }
+  </script>
           <p style="color:wheat;font-size:55px;text-align:center;">How to copy a TEXT to Clipboard on a Button-Click</p>
 
   <center>
