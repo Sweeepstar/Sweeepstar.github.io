@@ -7,12 +7,12 @@
    bottom: 0; left: 0;
    margin: auto; /* make em equal */
    margin-top: 24em;
-   
+
  }
- 
+
   .centerEmbed {
      text-align: center;
      margin-top: 18.5em;
-     color: black;
+     color: #e2e2e2;
      font-weight: bold;
  }
