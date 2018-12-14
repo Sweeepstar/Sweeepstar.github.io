@@ -82,7 +82,7 @@
   <div class="shuffleEmbed" id="player"></div>
 <script>
     /* Replace This Code - get Value from playlist page and place it here */
-    var playlistId = "fEbOOEj1ijk";
+    /*var playlistId = "PLtqPa_dqh_qOtA7XTEcC8VIZ-_qksEYKe";*/
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
 
@@ -96,6 +96,7 @@
         player = new YT.Player('player', {
             height: '315',
             width: '560',
+            videoID: 'fEbOOEj1ijk'
             playerVars: { 'showinfo': 0, 'loop': 1, 'rel': 0},
             events: {
                 'onReady': onPlayerReady,
