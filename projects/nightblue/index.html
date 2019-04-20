@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Nightblue | Sweeepstar Central</title>
+	
+	<meta content="Nightblue | Sweeepstar Central" property="og:title">
+	<meta content="Development by Sweeepstar" name="description">
+	<meta content="Development by Sweeepstar" property="og:description">
+	<meta content="https://sweeepstar.com/" property="og:url">
+	<meta content="website" property="og:type">
+	<meta content="#ffffff" name="theme-color">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="https://sweeepstar.com/assets/img/fb_share.png" property="og:image">
+	<meta content="https://sweeepstar.com/assets/img/fb_share.png" property="og:image:secure_url">
+	
+	<link href="assets/img/favicon.ico?1.0" rel="shortcut icon" type="image/icon">
+	<link href="assets/css/style.css?1.0" rel="stylesheet">
+	<link href="/assets/css/global.css?1.0" rel="stylesheet">
+	<link href="/assets/css/shuffle.css?1.0" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #151A2D;">
+		<a class="navbar-brand" href="https://github.com/Sweeepstar/sweeepstar.github.io">Github Project</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../nightcore/">Nightcore</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="../nightblue/">Nightblue</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../zerronite/">Zerronite</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="centerEmbed">
+		<h4>NB3 Playlist</h4>
+	</div>
+	<div class="shuffleEmbed" id="player"></div>
+	<script>
+	           var playlistId = "UUe55Gy-hFDvLZp8C8BZhBnw";
+	           var tag = document.createElement('script');
+	             tag.src = "https://www.youtube.com/iframe_api";
+
+
+	           var firstScriptTag = document.getElementsByTagName('script')[0];
+	           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	           var player;
+
+	           function onYouTubeIframeAPIReady() {
+	               player = new YT.Player('player', {
+	                   height: '315',
+	                   width: '560',
+	                   playerVars: { 'showinfo': 0, 'loop': 1, 'rel': 0},
+	                   events: {
+	                       'onReady': onPlayerReady,
+	                       'onStateChange': onPlayerStateChange
+	                   }
+
+	               });
+	           }
+
+
+	           var playlistArray;
+	           var playListArrayLength;
+	           var maxNumber;
+
+	           var oldNumber = 0;
+	           var NewNumber = 0;
+
+	           function newRandomNumber() {
+	               oldNumber = NewNumber;
+	               NewNumber = Math.floor(Math.random() * maxNumber);
+	               if (NewNumber == oldNumber) {
+	                   newRandomNumber();
+	               } else {
+	                   return NewNumber;
+	               }
+	           }
+
+	       function onPlayerReady(event) {
+	           player.loadPlaylist({
+	               'listType': 'playlist',
+	               'list': playlistId
+	           });
+	       }
+
+	       var firstLoad = true;
+	       function onPlayerStateChange(event) {
+	           console.log(event.data);
+	           if (event.data == YT.PlayerState.ENDED) {
+	               player.playVideoAt(newRandomNumber());
+	           } else {
+	               if (firstLoad && event.data == YT.PlayerState.PLAYING) {
+	                   firstLoad = false;
+	                   playlistArray = player.getPlaylist();
+	                   playListArrayLength = playlistArray.length;
+	                   maxNumber = playListArrayLength;
+	                   NewNumber = newRandomNumber();
+	                   player.playVideoAt(newRandomNumber());
+	               }
+	           }
+	       }
+
+	</script> 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	</script> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	</script> 
+	<script src="/assets/js/consoleInfo.js">
+	</script>
+</body>
+</html>

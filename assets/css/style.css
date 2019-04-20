@@ -1,0 +1,8 @@
+body {
+	background: url("../img/background.png") no-repeat center 5px fixed;
+}
+@media screen and (max-device-width: 768px) {
+	body {
+		background: url("../img/background.png") no-repeat center fixed;
+	}
+}
